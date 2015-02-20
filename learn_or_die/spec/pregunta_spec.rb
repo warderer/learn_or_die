@@ -15,6 +15,10 @@ describe Pregunta do
 
   	end
 
+	it "obtener guiones" do
+		@modelo.get_guiones('Sprint').should == 6
+	end
+
 end
 
 

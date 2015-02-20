@@ -17,4 +17,8 @@ class Pregunta
 		return @preguntas[pregunta]
 	end
 
+	def get_guiones(palabra)
+		return palabra.length
+	end
+
 end
