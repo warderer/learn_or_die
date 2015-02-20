@@ -28,6 +28,13 @@ end
 #end
 
 get '/partida' do
+
 @@pregunta = "Nombre que se le da a las iteraciones en Scrum"
+@@respuesta = "Sprint"
+
+@@guiones = '_ ' * @@respuesta.length
+
 	erb :partida
 end
+
+

@@ -25,7 +25,17 @@ Then(/^debe aparecer la pregunta "(.*?)"$/) do |arg1|
 end
 
 
+Given(/^se muestra una pregunta$/) do
+  visit '/partida'
+end
 
+Given(/^la respuesta es "(.*?)"$/) do |arg1|
+   last_response.body.should =~ /#{arg1}/m
+end
+
+Then(/^Debo ver los guiones correspondientes como "(.*?)"$/) do |arg1|
+   last_response.body.should =~ /#{arg1}/m
+end
 
 
 
