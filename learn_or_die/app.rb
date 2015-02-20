@@ -7,22 +7,27 @@ get '/' do
 end
 
 
-get '/juego' do
-  @@mensaje = ""
-  if params["letra"] == ""
-    @@mensaje ="Por favor escribe una letra"
-  elsif params["letra"].length > 1
-    @@mensaje ="Debe ingresar solo una letra"
-  else juego = Juego.new
-   if juego.is_valid(params["letra"])
+#get '/juego' do
+#  @@mensaje = ""
+#  if params["letra"] == ""
+#    @@mensaje ="Por favor escribe una letra"
+#  elsif params["letra"].length > 1
+#    @@mensaje ="Debe ingresar solo una letra"
+#  else juego = Juego.new
+#   if juego.is_valid(params["letra"])
 
-     @@mensaje = "acertaste"
+#     @@mensaje = "acertaste"
 
-   end
+#   end
 
-  end
+#  end
   
 
-  erb :home
+  #erb :partida
 
+#end
+
+get '/partida' do
+@@pregunta = "Nombre que se le da a las iteraciones en Scrum"
+	erb :partida
 end
